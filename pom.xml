@@ -25,6 +25,7 @@
 	<modules>
 		<module>ioc</module>
 		<module>aop</module>
+		<module>setting</module>
 	</modules>
 
 	<build>

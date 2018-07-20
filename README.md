@@ -57,6 +57,27 @@
 
 方法规则拦截对代码没有侵入性，不需要在被拦截方法上添加注解，仅根据包名、类名或方法名以及参数类型进行拦截，在切面类中需要编写 AOP 表达式声明切点，`@Pointcut("execution(* MethodService.*(..))")`。
 
+## 3. Spring 常用配置
+
+### 3.1 [profile](setting/src/main/java/com/moonspirit/springlearning/setting/profile/)
+
+profile 为不同环境下应用不同配置提供支持，使用注解 @Profile("") 配置 bean 加载环境，只有当选择对应的环境时，才会产生对应的 bean。
+
+设置运行环境有以下几种方法：
+
+- 通过应用上下文设置 `context.getEnvironment().setActiveProfiles("dev")`
+
+- 通过 JVM 配置 `-Dspring.profiles.active="production"`
+
+- Web 应用在 web.xml 中配置
+
+```xml
+        <init-param>
+            <param-name>spring.profiles.default</param-name>
+            <param-value>development</param-value>
+        </init-param>
+```
+
 # 三、参考书籍
 
 - Java EE 开发的颠覆者：Spring Boot 实战 /汪云飞编著
