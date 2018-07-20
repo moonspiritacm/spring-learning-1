@@ -20,9 +20,9 @@
 
 ## 2. Spring 面向切面编程
 
-## 2.1 [基于注解拦截的 AOP](aop/src/main/java/com/moonspirit/springlearning/aop/annotationaop/)
+### 2.1 [基于注解拦截的 AOP](aop/src/main/java/com/moonspirit/springlearning/aop/annotationaop/)
 
-### 2.1.1 [Action.java](aop/src/main/java/com/moonspirit/springlearning/aop/annotationaop/Action.java) 根据拦截规则自定义注解
+#### 2.1.1 [Action.java](aop/src/main/java/com/moonspirit/springlearning/aop/annotationaop/Action.java) 根据拦截规则自定义注解
 
 - @Retention 定义注解的保留策略
 
@@ -45,15 +45,15 @@
 
 - @Document 该注解被包含在 javadoc 中
 
-### 2.1.2 [AnnotationService.java](aop/src/main/java/com/moonspirit/springlearning/aop/annotationaop/AnnotationService.java) 基于注解的被拦截类
+#### 2.1.2 [AnnotationService.java](aop/src/main/java/com/moonspirit/springlearning/aop/annotationaop/AnnotationService.java) 基于注解的被拦截类
 
 使用自定义注解 @Action 标注连接点，当程序运行到 @Action 标注的位置时触发拦截。
 
-### 2.1.3 [AnnotationAspect.java](aop/src/main/java/com/moonspirit/springlearning/aop/annotationaop/AnnotationAspect.java) 基于注解拦截的切面类
+#### 2.1.3 [AnnotationAspect.java](aop/src/main/java/com/moonspirit/springlearning/aop/annotationaop/AnnotationAspect.java) 基于注解拦截的切面类
 
 由于使用了自定义注解，基于注解拦截的切面类编写较简单：通过 @Action 自定义注解声明切点，`@Pointcut("@annotation(Action)")`；通过切点声明建言，`@Before("annotationPointCut()")`。
 
-## 2.2 [基于方法规则拦截的 AOP](aop/src/main/java/com/moonspirit/springlearning/aop/methodaop/)
+### 2.2 [基于方法规则拦截的 AOP](aop/src/main/java/com/moonspirit/springlearning/aop/methodaop/)
 
 方法规则拦截对代码没有侵入性，不需要在被拦截方法上添加注解，仅根据包名、类名或方法名以及参数类型进行拦截，在切面类中需要编写 AOP 表达式声明切点，`@Pointcut("execution(* MethodService.*(..))")`。
 
