@@ -78,6 +78,10 @@ profile 为不同环境下应用不同配置提供支持，使用注解 @Profile
         </init-param>
 ```
 
+### 3.2 [event](setting/src/main/java/com/moonspirit/springlearning/setting/event/)
+
+Spring 事件实现实体类
+
 # 三、参考书籍
 
 - Java EE 开发的颠覆者：Spring Boot 实战 /汪云飞编著

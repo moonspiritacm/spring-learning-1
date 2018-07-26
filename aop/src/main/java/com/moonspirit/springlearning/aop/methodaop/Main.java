@@ -16,7 +16,7 @@ public class Main {
 	 * @MethodName       main
 	 * @Description      TODO
 	 *
-	 * @param            @param args
+	 * @param            args
 	 * @return           void
 	 * @throws
 	 */
