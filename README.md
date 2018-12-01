@@ -1,6 +1,6 @@
 # 一、前言
 
-记录 Spring 框架学习过程中的点点滴滴，主要参考汪云飞编著的[《JavaEE 开发的颠覆者：Spring Boot 实战》][^1]。
+记录 Spring 框架学习过程中的点点滴滴，主要参考汪云飞编著的[《JavaEE 开发的颠覆者：Spring Boot 实战》][1]。
 
 # 二、学习笔记
 
@@ -84,4 +84,4 @@ Spring 事件实现实体类
 
 # 三、参考文献
 
-[^1]: Java EE 开发的颠覆者：Spring Boot 实战 /汪云飞编著
+[1]: Java EE 开发的颠覆者：Spring Boot 实战 /汪云飞编著
